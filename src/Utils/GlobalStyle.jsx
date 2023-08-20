@@ -25,6 +25,17 @@ const GlobalStyle = styled.div`
     margin: 0;
     padding: 0;
   }
+
+  /* Version tablette */
+    @media only screen and (max-width : 992px) {
+      max-width: 992px;
+    }
+
+    /* Version mobile */
+    @media only screen and (max-width : 767px) {
+      max-width: 767px;
+    }
+
 `;
 
 export default GlobalStyle;
