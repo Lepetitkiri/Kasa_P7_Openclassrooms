@@ -1,9 +1,15 @@
 import React from "react";
 
+{/*Components*/ }
+import Header from '../../Components/Header/Index'
+
 function About() {
     return (
-        <main> About page
-        </main>
+        <>
+            <Header />
+            <main> About page
+            </main>
+        </>
     );
 }
 

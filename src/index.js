@@ -7,9 +7,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <GlobalStyle>
-      <div className="container">
-        <App />
-      </div>
+      <App />
     </GlobalStyle>
   </React.StrictMode>
 );

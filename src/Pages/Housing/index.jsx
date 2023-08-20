@@ -1,9 +1,15 @@
 import React from "react";
 
+{/*Components*/ }
+import Header from '../../Components/Header/Index'
+
 function Housing() {
     return (
-        <main> Housing page
-        </main>
+        <>
+            <Header />
+            <main> Housing page
+            </main>
+        </>
     );
 }
 
