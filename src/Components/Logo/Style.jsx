@@ -1,14 +1,22 @@
 import styled from 'styled-components';
+import colors from '../../Utils/Colors';
 
-const LogoStyle = styled.div`
-      width: 210.322px;
-      height: 68px;
+const LogoStyled = styled.div`
 
-      /* Version tablette */
-      @media only screen and (max-width : 992px) {
-            width: 145px;
-            height: 47px;
-      }
+  /* styles spécifiques à la classe "header__logo" */
+  &.header__logo {
+    fill: ${colors.primary};
+    width: 210.322px;
+    height: 68px;
+    flex-shrink: 0;
+
+  /* Version mobile */
+  @media only screen and (max-width: 767px) {
+    width: 145px;
+    height: 47px;
+    flex-shrink: 0;
+  }
+  }
 `;
 
-export default LogoStyle;
+export default LogoStyled;

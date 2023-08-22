@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import HeaderStyle from './Style'
 import Logo from '../Logo/Index.jsx'
+import HeaderStyle from "./Style.jsx";
 
 function Header() {
-    return (
-        <HeaderStyle>
-            <Logo />
-            <nav>
-                <Link to="/Home"> Accueil </Link>
-                <Link to="/About"> A propos </Link>
-            </nav>
-        </HeaderStyle>
-    );
+  return (
+    <HeaderStyle>
+      <Logo className="header__logo" />
+      <nav>
+        <Link to="/Home"> Accueil </Link>
+        <Link to="/About"> A propos </Link>
+      </nav>
+    </HeaderStyle>
+  );
 }
 
 export default Header;
