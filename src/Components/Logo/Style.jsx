@@ -17,6 +17,14 @@ const LogoStyled = styled.div`
     flex-shrink: 0;
   }
   }
+  
+
+  /* styles spécifiques à la classe "footer__logo" */
+  &.footer__logo {
+    fill: ${colors.white};
+    width: 122px;
+    height: 39.444px;
+  }
 `;
 
 export default LogoStyled;
