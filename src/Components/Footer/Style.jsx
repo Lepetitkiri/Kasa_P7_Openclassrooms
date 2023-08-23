@@ -3,7 +3,7 @@ import colors from '../../Utils/Colors';
 
 const FooterStyle = styled.footer`
 
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: ${colors.black};
@@ -21,12 +21,18 @@ const FooterStyle = styled.footer`
     line-height: 142.6%;
   }
 
-  /* Version tablette */
-  @media only screen and (max-width: 992px) {
-  }
-
   /* Version mobile */
   @media only screen and (max-width: 767px) {
+    padding: 62px 0px 62px 0px;
+    gap: 0px;
+  }
+
+  /* Version mobile - Très petits ecrans */
+  @media only screen and (max-width: 525px) {
+    p {
+      text-align: center;
+      height: auto;
+    }
   }
 `;
 
