@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const HeaderStyle = styled.header`
   display: flex;
   justify-content: space-between;
-  margin: 40px 7% 0 7%;
+  padding: 40px 7% 0 7%;
 
   nav {
     display: flex;
@@ -26,7 +26,7 @@ const HeaderStyle = styled.header`
 
   /* Version mobile */
   @media only screen and (max-width: 767px) {
-    margin: 20px 5% 0 5%;
+    padding: 20px 5% 0 5%;
 
     nav {
       font-size: 12px;
