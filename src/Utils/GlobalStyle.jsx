@@ -21,11 +21,6 @@ const GlobalStyle = styled.div`
     color: ${colors.white};
   }
 
-  div, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-  }
-
   /* Version tablette */
     @media only screen and (max-width : 992px) {
       max-width: 992px;
