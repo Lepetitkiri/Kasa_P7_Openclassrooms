@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import colors from '../../Utils/Colors';
 
-const HomeStyle = styled.main`
+const GalleryStyle = styled.main`
 
   display: flex;
   justify-content: center;
   height: auto;
   margin: 43px 0px 43px 0px;
+  padding: 56px 50px 56px 50px;
 
   .gallery__home {
     display: flex;
@@ -20,6 +21,7 @@ const HomeStyle = styled.main`
     @media only screen and (max-width: 767px) {
       width: 90%;
       border-radius: 0px;
+      padding: 0px;
       background-color: ${colors.white};
       }
 
@@ -29,4 +31,4 @@ const HomeStyle = styled.main`
         }
 `;
 
-export default HomeStyle;
+export default GalleryStyle;
