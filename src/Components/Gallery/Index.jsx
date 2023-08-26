@@ -1,11 +1,12 @@
 import React from "react";
 import GalleryStyle from "../Gallery/Style.jsx";
+import GalleryCard from "../Card/Index.jsx";
 
 function Gallery() {
   return (
     <GalleryStyle>
       <section className="gallery__home">
-        <p>Home page en cours</p>
+        <GalleryCard />
       </section>
     </GalleryStyle>
   );
