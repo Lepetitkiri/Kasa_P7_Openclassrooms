@@ -1,20 +1,16 @@
 import styled from 'styled-components';
 import colors from '../../Utils/Colors';
 
-const GalleryStyle = styled.main`
+const GalleryStyle = styled.section`
 
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   height: auto;
+  width: 86%;
+  border-radius: 25px;
+  background: #F6F6F6;
   margin: 43px 0px 43px 0px;
-
-  .gallery__home {
-    display: flex;
-    justify-content: center;
-    height: auto;
-    width: 86%;
-    border-radius: 25px;
-    background: #F6F6F6;
 
     /* Version mobile */
     @media only screen and (max-width: 767px) {
@@ -29,7 +25,6 @@ const GalleryStyle = styled.main`
     /* Version mobile - Très petits ecrans */
     @media only screen and (max-width: 525px)
 
-        }
 `;
 
 export default GalleryStyle;

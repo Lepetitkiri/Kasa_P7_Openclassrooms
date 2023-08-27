@@ -12,6 +12,11 @@ const GlobalStyle = styled.div`
     width: 100%;
     object-fit: cover;
 
+    main {
+      display: flex;
+      justify-content: center;
+    }
+
   a {
     text-decoration: none;
     color: ${colors.primary};
