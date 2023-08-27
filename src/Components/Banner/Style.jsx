@@ -7,26 +7,17 @@ const BannerStyle = styled.div`
 
   display: flex;
   justify-content: center;
-  height: 223px;
-  width: 100%;
-
-div {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100%;
-  border-radius: 25px;
+  height: 223px;
   width: 86%;
+  border-radius: 25px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  }
 
 &.banner__home {
   margin-top: 63px;
-  div {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${bannerHomeUrl});
-  }
   h1 {
     color: ${colors.white};
     font-size: 48px;
@@ -38,9 +29,7 @@ div {
 
 &.banner__about {
   margin-top: 44px;
-  div {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${bannerAboutUrl});
-  }
   h1 {
     display: none;
   }
@@ -60,10 +49,8 @@ div {
 
   /* Version mobile */
   @media only screen and (max-width: 767px) {
-    div {
       width: 90%;
       border-radius: 10px;
-    }
     &.banner__home {
       height: 111px;
     }
@@ -72,10 +59,8 @@ div {
   /* Version mobile - Très petits ecrans */
   @media only screen and (max-width: 525px) {
     &.banner__home {
-      div {
         display: flex;
         justify-content: flex-start;
-      }
       h1 {
         padding: 0px 16px 0px 16px;
       }

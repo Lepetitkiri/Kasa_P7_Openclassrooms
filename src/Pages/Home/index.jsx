@@ -10,8 +10,10 @@ function Home() {
     return (
         <>
             <Header />
-            <Banner className="banner__home" />
-            <Gallery />
+            <main>
+                <Banner className="banner__home" />
+                <Gallery />
+            </main>
             <Footer />
         </>
     );

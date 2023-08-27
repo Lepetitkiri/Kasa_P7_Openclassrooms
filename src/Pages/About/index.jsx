@@ -9,8 +9,8 @@ function About() {
     return (
         <>
             <Header />
-            <Banner className="banner__about" />
-            <main> About page
+            <main>
+                <Banner className="banner__about" />
             </main>
             <Footer />
         </>

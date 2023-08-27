@@ -4,11 +4,9 @@ import GalleryCard from "../Card/Index.jsx";
 
 function Gallery() {
   return (
-    <main>
-      <GalleryStyle className="gallery__home">
-        <GalleryCard />
-      </GalleryStyle>
-    </main>
+    <GalleryStyle className="gallery__home">
+      <GalleryCard />
+    </GalleryStyle>
   );
 }
 

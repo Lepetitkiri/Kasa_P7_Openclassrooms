@@ -5,9 +5,7 @@ import PropTypes from "prop-types";
 function Banner({ className }) {
   return (
     <BannerStyle className={className}>
-      <div>
-        <h1>Chez vous, partout et ailleurs</h1>
-      </div>
+      <h1>Chez vous, partout et ailleurs</h1>
     </BannerStyle>
   );
 }
