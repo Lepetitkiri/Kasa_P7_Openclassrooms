@@ -17,6 +17,7 @@ function GalleryCard() {
         <GalleryCardStyle key={`card-${card.id}`} >
           <p>{card.title}</p>
           <img src={card.image} alt={card.title} />
+          <div></div> {/*Div contenant le dégradé de couleur*/}
         </GalleryCardStyle >
       ))
       }

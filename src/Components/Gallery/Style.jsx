@@ -13,7 +13,9 @@ const GalleryStyle = styled.section`
   background: #F6F6F6;
   margin: 43px 0px 43px 0px;
   padding: 56px 50px 56px 50px;
-
+  row-gap: 50px;
+  column-gap : 56px;
+  
     /* Version mobile */
     @media only screen and (max-width: 767px) {
       width: 90%;
