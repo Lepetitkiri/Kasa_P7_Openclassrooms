@@ -14,7 +14,7 @@ function GalleryCard() {
   return (
     <>
       {dataArrayForCards.map(card => (
-        <GalleryCardStyle key={`card-${card.id}`} >
+        <GalleryCardStyle key={`card-${card.id}`} to={`../housing/${card.id}`} >
           <p>{card.title}</p>
           <img src={card.image} alt={card.title} />
           <div></div> {/*Div contenant le dégradé de couleur*/}

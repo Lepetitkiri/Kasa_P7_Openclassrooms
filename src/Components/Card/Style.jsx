@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import colors from '../../Utils/Colors';
+import { Link } from 'react-router-dom';
 
-const GalleryCardStyle = styled.div`
+const GalleryCardStyle = styled(Link)`
 
   display: flex;
   justify-content: center;
@@ -9,7 +10,6 @@ const GalleryCardStyle = styled.div`
   width: 340px;
   height: 340px;
   border-radius: 10px;
-  color: ${colors.white};
   position: relative;
 
   div {
@@ -38,6 +38,7 @@ const GalleryCardStyle = styled.div`
     font-weight: 500;
     line-height: 142.6%;
     z-index: 1;
+    color: ${colors.white};
   }
   
     /* Version mobile */
