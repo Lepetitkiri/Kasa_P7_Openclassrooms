@@ -8,24 +8,33 @@ import Footer from '../../Components/Footer/Index';
 
 function Housing() {
 
-    {/* Récupération de l'id associé au logement : */ }
+    {/* Récupération de l'id associé au logement */ }
     const { housingId } = useParams();
 
-    {/*Recherche de correspondance entre la base de données et l'ID récupéré dans l'URL */ }
-    const isHousingIdCorrect = datas.find(item => item.id === housingId);
 
-    {/* Si isHousingCorrect renvoi "undefined", cela signifie que l'Id récupéré est mauvais */ }
-    isHousingIdCorrect === undefined ? console.log("Erreur") : console.log("Id conforme");
+    {/*Fonction de vérification du format de l'ID via un masque Regex */ }
+    let idRegex = /^[a-zA-Z0-9]+$/;
 
+    if (!idRegex.test(housingId)) { // Si le format de l'ID est non conforme au masque Regex :
+        window.alert("ID étrange ! Si tu essaie de pirater mon site tu vas avoir affaire à moi ! 🙅🙅🙅`")
 
-    return (
-        <>
-            <Header />
-            <main> Housing page
-            </main>
-            <Footer />
-        </>
-    );
+    } else { // Si le format de l'ID est conforme au Regex : recherche de correspondance dans la base de données
+        const isHousingIdCorrect = datas.some(item => item.id === housingId);
+
+        if (!isHousingIdCorrect) { // Si l'ID n'est pas dans la base de données : 
+            window.alert("Mayday! On dirait qu'il y a un probleme 😱!")
+
+        } else // Si tout est OK, on execute le render
+
+            return (
+                <>
+                    <Header />
+                    <main> Coucou la location n° {housingId}
+                    </main>
+                    <Footer />
+                </>
+            );
+    }
 }
 
 export default Housing;
