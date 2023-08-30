@@ -4,6 +4,7 @@ import datas from '../../Ressources/housings.json';
 
 {/*Components*/ }
 import Header from '../../Components/Header/Index';
+import Outlet from '../../Components/Outlet/Index';
 import Footer from '../../Components/Footer/Index';
 import Error from '../Error';
 
@@ -32,7 +33,10 @@ function Housing() {
             return (
                 <>
                     <Header />
-                    <main> Coucou la location n° {housingId}
+                    <main>
+                        Coucou la location n° {housingId}
+
+                        <Outlet />
                     </main>
                     <Footer />
                 </>
