@@ -51,7 +51,7 @@ const OutletStyle = styled.div`
     border-radius: 0px 0px 10px 10px;
     color: ${colors.primary};
     background-color: ${colors.secondary};
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 34px;
   }

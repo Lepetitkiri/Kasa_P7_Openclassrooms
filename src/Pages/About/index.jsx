@@ -1,4 +1,5 @@
 import React from "react";
+import datas from '../../Ressources/about.json';
 
 {/*Components*/ }
 import Header from '../../Components/Header/Index';
@@ -7,13 +8,23 @@ import Outlet from "../../Components/Outlet/Index";
 import Footer from '../../Components/Footer/Index';
 
 function About() {
+
+    {/*Récupération des infos attendues à partir des datas JSON */ }
+    const dataArrayForOutlet = datas.map(item => ({
+        title: item.title,
+        text: item.text
+    }));
+
     return (
         <>
             <Header />
             <main>
                 <Banner className="banner__about" />
-                <Outlet />
-            </main>
+                {dataArrayForOutlet.map(outletKey => (
+                    <Outlet key={`outlet-about-${outletKey.id}`} />
+                ))
+                }
+            </main >
             <Footer />
         </>
     );
