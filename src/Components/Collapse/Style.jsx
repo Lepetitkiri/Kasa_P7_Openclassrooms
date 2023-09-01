@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from '../../Utils/Colors';
 
-const OutletStyle = styled.div`
+const CollapseStyle = styled.div`
 
   display : flex;
   flex-wrap: wrap;
@@ -82,4 +82,4 @@ const OutletStyle = styled.div`
     }
 `;
 
-export default OutletStyle;
+export default CollapseStyle;

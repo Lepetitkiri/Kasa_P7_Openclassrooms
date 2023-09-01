@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import OutletStyle from "../Outlet/Style.jsx";
+import CollapseStyle from "./Style.jsx";
 
-function Outlet() {
+function Collapse() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <OutletStyle>
+    <CollapseStyle>
       <div className="dropdown">
         <div className="dropdown__title">
           <h2>Title</h2>
@@ -15,8 +15,8 @@ function Outlet() {
         </div>
         {isOpen ? <div className="dropdown__datas">Outlet contenu</div> : <div></div>}
       </div>
-    </OutletStyle>
+    </CollapseStyle>
   );
 }
 
-export default Outlet;
+export default Collapse;

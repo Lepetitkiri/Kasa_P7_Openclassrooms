@@ -4,7 +4,7 @@ import datas from '../../Ressources/about.json';
 {/*Components*/ }
 import Header from '../../Components/Header/Index';
 import Banner from '../../Components/Banner/Index';
-import Outlet from "../../Components/Outlet/Index";
+import Collapse from "../../Components/Collapse/Index";
 import Footer from '../../Components/Footer/Index';
 
 function About() {
@@ -21,7 +21,7 @@ function About() {
             <main>
                 <Banner className="banner__about" />
                 {dataArrayForOutlet.map(outletKey => (
-                    <Outlet key={`outlet-about-${outletKey.id}`} />
+                    <Collapse key={`outlet-about-${outletKey.id}`} />
                 ))
                 }
             </main >
