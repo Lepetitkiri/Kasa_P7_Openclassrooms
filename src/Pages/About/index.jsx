@@ -20,10 +20,18 @@ function About() {
             <Header />
             <main>
                 <Banner className="banner__about" />
-                {dataArrayForOutlet.map(outletKey => (
-                    <Collapse key={`outlet-about-${outletKey.id}`} />
-                ))
-                }
+
+                {/* Utilisation de map pour créer des composants Collapse */}
+                {dataArrayForOutlet.map((aboutCollapse, index) => (
+                    <Collapse
+                        key={`aboutCollapse-${index}`}
+                        title={`${aboutCollapse.title}`}
+                        text={`${aboutCollapse.text}`}
+                        className={`collapse__about`}
+                    >
+
+                    </Collapse>
+                ))}
             </main >
             <Footer />
         </>
