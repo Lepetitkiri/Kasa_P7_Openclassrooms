@@ -1,0 +1,17 @@
+.collapse__about {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 72%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+  /* Version mobile */
+  @media only screen and (max-width: 767px) {
+
+    width: 90%;
+  }
+
+}

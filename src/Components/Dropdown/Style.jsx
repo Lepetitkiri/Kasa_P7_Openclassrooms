@@ -3,7 +3,7 @@ import colors from '../../Utils/Colors';
 
 const DropdownStyle = styled.div`
 
-  display: flex;
+display: flex;
   flex-direction: column;
   width: 47%;
   height: auto;

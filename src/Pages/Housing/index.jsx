@@ -4,7 +4,6 @@ import datas from '../../Ressources/housings.json';
 
 {/*Components*/ }
 import Header from '../../Components/Header/Index';
-import Collapse from '../../Components/Collapse/Index';
 import Footer from '../../Components/Footer/Index';
 import Error from '../Error';
 
@@ -36,7 +35,6 @@ function Housing() {
                     <main>
                         Coucou la location n° {housingId}
 
-                        <Collapse />
                     </main>
                     <Footer />
                 </>

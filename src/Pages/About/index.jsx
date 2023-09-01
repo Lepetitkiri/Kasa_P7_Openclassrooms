@@ -1,16 +1,17 @@
 import React from "react";
 import datas from '../../Ressources/about.json';
+import './About.css';
 
 {/*Components*/ }
 import Header from '../../Components/Header/Index';
 import Banner from '../../Components/Banner/Index';
-import Collapse from "../../Components/Collapse/Index";
+import Dropdown from '../../Components/Dropdown/Index';
 import Footer from '../../Components/Footer/Index';
 
 function About() {
 
-    {/*Récupération des infos attendues à partir des datas JSON */ }
-    const dataArrayForOutlet = datas.map(item => ({
+    /*Récupération des infos attendues à partir des datas JSON */
+    const dataArrayForCollapse = datas.map(item => ({
         title: item.title,
         text: item.text
     }));
@@ -20,18 +21,17 @@ function About() {
             <Header />
             <main>
                 <Banner className="banner__about" />
+                <div className="collapse__about">
 
-                {/* Utilisation de map pour créer des composants Collapse */}
-                {dataArrayForOutlet.map((aboutCollapse, index) => (
-                    <Collapse
-                        key={`aboutCollapse-${index}`}
-                        title={`${aboutCollapse.title}`}
-                        text={`${aboutCollapse.text}`}
-                        className={`collapse__about`}
-                    >
-
-                    </Collapse>
-                ))}
+                    {/* Utilisation de map pour créer des composants Dropdown */}
+                    {dataArrayForCollapse.map((aboutCollapse, index) => (
+                        <Dropdown
+                            key={`aboutCollapse-${index}`}
+                            title={`${aboutCollapse.title}`}
+                            text={`${aboutCollapse.text}`}
+                        />
+                    ))}
+                </div >
             </main >
             <Footer />
         </>
