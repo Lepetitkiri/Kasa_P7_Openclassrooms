@@ -1,12 +1,14 @@
 .collapse__about {
 
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 72%;
+  width: 86%;
   height: auto;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin-top: 31px;
+  margin-bottom: 37px;
+  row-gap: 31px;
 
   /* Version mobile */
   @media only screen and (max-width: 767px) {
@@ -14,4 +16,11 @@
     width: 90%;
   }
 
+  /* Version mobile - Très petits ecrans */
+  @media only screen and (max-width: 525px) {
+
+    margin-top: 19px;
+    margin-bottom: 58px;
+    row-gap: 20px;
+  }
 }
