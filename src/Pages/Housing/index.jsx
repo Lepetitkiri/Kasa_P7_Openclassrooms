@@ -16,27 +16,24 @@ function Housing() {
     {/*Fonction de vérification du format de l'ID via un masque Regex */ }
     let idRegex = /^[a-zA-Z0-9]+$/;
 
-    if (!idRegex.test(housingId)) { // Si le format de l'ID est non conforme au masque Regex :
+    {/*Recherche de correspondance dans la base de données */ }
+    const isHousingIdCorrect = datas.some(item => item.id === housingId);
+
+    if (!idRegex.test(housingId) || !isHousingIdCorrect) { // Si le format de l'ID est non conforme au masque Regex ou qu'il n'est pas trouvé dans la base de données :
         return <Error />;
 
-    } else { // Si le format de l'ID est conforme au Regex : recherche de correspondance dans la base de données
-        const isHousingIdCorrect = datas.some(item => item.id === housingId);
+    } else {
 
-        if (!isHousingIdCorrect) { // Si l'ID n'est pas dans la base de données : 
-            return <Error />;
+        return (
+            <>
+                <Header />
+                <main>
+                    Coucou la location n° {housingId}
 
-        } else // Si tout est OK, on execute le render
-
-            return (
-                <>
-                    <Header />
-                    <main>
-                        Coucou la location n° {housingId}
-
-                    </main>
-                    <Footer />
-                </>
-            );
+                </main>
+                <Footer />
+            </>
+        );
     }
 }
 
