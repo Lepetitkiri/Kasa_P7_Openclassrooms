@@ -34,20 +34,18 @@ const DropdownStyle = styled.div`
       background-color: ${colors.primary};
       color: ${colors.white};
     }
+  }
 
   .dropdown__datas {
     box-sizing: border-box;
     height: auto;
-    padding: 10px;
+    padding: 17px;
     border-radius: 0px 0px 10px 10px;
     color: ${colors.primary};
     background-color: ${colors.secondary};
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 24px;
     line-height: 34px;
   }
-
-}
 
     /* Version mobile */
     @media only screen and (max-width: 767px) {
@@ -61,13 +59,13 @@ const DropdownStyle = styled.div`
             font-size: 13px;
             line-height: 18.54px;
           }
-      
+        }
+
         .dropdown__datas {
+          padding: 20px 8px 55px 8px;
           font-size: 12px;
           line-height: 17px;
         }
-
-    }
 `;
 
 export default DropdownStyle;

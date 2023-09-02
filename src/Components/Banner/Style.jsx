@@ -51,9 +51,14 @@ const BannerStyle = styled.div`
   @media only screen and (max-width: 767px) {
       width: 90%;
       border-radius: 10px;
+      
     &.banner__home {
       height: 111px;
+      margin-top: 16px;
     }
+
+    &.banner__about {
+      margin-top: 17px;
   }
 
   /* Version mobile - Très petits ecrans */

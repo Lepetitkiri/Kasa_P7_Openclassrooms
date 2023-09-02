@@ -16,10 +16,17 @@ const GalleryStyle = styled.section`
   row-gap: 50px;
   column-gap : 56px;
   
+  /* Version tablette */
+  @media only screen and (max-width: 992px) {
+    padding: 56px 10px 56px 10px;
+    column-gap: 20px;
+  }
+
     /* Version mobile */
     @media only screen and (max-width: 767px) {
-      width: 90%;
+      width: 100%;
       border-radius: 0px;
+      margin: 22px 0px 43px 0px;
       background-color: ${colors.white};
       padding: 0px;
       }

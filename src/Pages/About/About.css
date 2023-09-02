@@ -4,10 +4,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 86%;
+  width: 72%;
   height: auto;
   margin-top: 31px;
-  margin-bottom: 37px;
+  margin-bottom: 201px;
   row-gap: 31px;
 
   /* Version mobile */
@@ -20,7 +20,7 @@
   @media only screen and (max-width: 525px) {
 
     margin-top: 19px;
-    margin-bottom: 58px;
+    margin-bottom: 168px;
     row-gap: 20px;
   }
 }
