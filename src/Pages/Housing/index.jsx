@@ -4,6 +4,7 @@ import datas from '../../Ressources/housings.json';
 
 {/*Components*/ }
 import Header from '../../Components/Header/Index';
+import Slideshow from '../../Components/Slideshow/Index';
 import Footer from '../../Components/Footer/Index';
 import Error from '../Error';
 
@@ -28,6 +29,7 @@ function Housing() {
             <>
                 <Header />
                 <main>
+                    <Slideshow />
                     Coucou la location n° {housingId}
 
                 </main>
