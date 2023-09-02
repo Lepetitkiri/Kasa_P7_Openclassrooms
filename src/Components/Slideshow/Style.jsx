@@ -7,6 +7,13 @@ const SlideshowStyled = styled.div`
   color: ${colors.white};
 }
 
+&.slideshow__picture {
+  display: flex;
+  width: 1240px;
+  height: 415px;
+  border-radius: 25px;
+}
+
   /* Version tablette */
   @media only screen and (max-width: 992px) {
   }
