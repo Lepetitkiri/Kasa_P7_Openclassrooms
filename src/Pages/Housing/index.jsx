@@ -13,7 +13,6 @@ function Housing() {
     {/* Récupération de l'id associé au logement */ }
     const { housingId } = useParams();
 
-
     {/*Fonction de vérification du format de l'ID via un masque Regex */ }
     let idRegex = /^[a-zA-Z0-9]+$/;
 
@@ -25,11 +24,14 @@ function Housing() {
 
     } else {
 
+        {/* Récupération des données concernant le logement pour passage via des props */ }
+        const housingData = datas.find((item) => item.id === housingId);
+
         return (
             <>
                 <Header />
                 <main>
-                    <Slideshow />
+                    <Slideshow pictureArray={housingData.pictures} pictureAlt={housingData.title} />
                     Coucou la location n° {housingId}
 
                 </main>
