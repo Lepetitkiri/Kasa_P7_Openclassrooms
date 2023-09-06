@@ -3,27 +3,93 @@ import colors from '../../Utils/Colors';
 
 const SlideshowStyled = styled.div`
 
-  Background-color: ${colors.primary};
-  color: ${colors.white};
-}
-
-&.slideshow__picture {
   display: flex;
-  width: 1240px;
+  position: relative;
+  width: 86%;  
   height: 415px;
-  border-radius: 25px;
-}
+  margin-top: 20px;
+  object-fit: cover;
 
-  /* Version tablette */
-  @media only screen and (max-width: 992px) {
+  .slideshow__picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+  }
+
+
+  button {
+    position : absolute;
+    border: 0;
+    width: 96px;
+    height: 119px;
+    background: transparent;
+    cursor: pointer;
+
+    &.slideshow__leftArrow, &.slideshow__rightArrow {
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      top: 50%;
+      transform: translate(0,-50%);
+    }
+    &.slideshow__leftArrow {
+      left: 0%;
+    }
+    &.slideshow__rightArrow {
+      right: 0%;
+    }
+
+    .slideshow__leftArrow--Mobile, .slideshow__rightArrow--Mobile {
+      visibility: hidden;
+      position: absolute;
+      top: 50%;
+      transform: translate(0,-50%);
+    }
+    .slideshow__leftArrow--Mobile {
+      left: 0%;
+    }
+    .slideshow__rightArrow--Mobile {
+      right: 0%;
+    }
+  }
+
+  p {
+    position : absolute;  
+    height: 32px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    bottom: 0%;
+    left: 50%;
+    color: ${colors.white};
   }
 
   /* Version mobile */
   @media only screen and (max-width: 767px) {
-  }
+    width: 90%;
+    height: 516px;
 
-  /* Version mobile - Très petits ecrans */
-  @media only screen and (max-width: 525px) {
+    button {
+      .slideshow__leftArrow--Desktop, &.slideshow__rightArrow--Desktop {
+        visibility: hidden;
+        width: 24px;
+        height: 24px;
+      }
+
+      .slideshow__leftArrow--Mobile {
+        visibility: visible;
+        padding-left: 10px;
+      }
+      .slideshow__rightArrow--Mobile {
+        visibility: visible;
+        padding-right: 10px;
+      }
+    }
+
+    p {
+      display: none;
+    }
   }
 `;
 

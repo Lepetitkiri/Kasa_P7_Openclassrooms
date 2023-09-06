@@ -21,11 +21,13 @@ function Slideshow({ pictureArray, pictureAlt }) {
     <SlideshowStyled>
       <img src={pictureArray[currentPicture]} alt={pictureAlt} className="slideshow__picture" />
       <button className="slideshow__leftArrow" onClick={previousPicture}>
-        <img src='../Pictures/FlecheVersLaGauche.png' alt="Fleche vers la gauche" />
+        <img src='../Pictures/FlecheVersLaGauche.png' alt="Fleche vers la gauche" className="slideshow__leftArrow--Desktop" />
+        <img src='../Pictures/FlecheVersLaGaucheMobile.png' alt="Fleche vers la gauche" className="slideshow__leftArrow--Mobile" />
       </button>
       <p>{currentPicture + 1} / {pictureArray.length} </p>
       <button className="slideshow__rightArrow" onClick={nextPicture}>
-        <img src='../Pictures/FlecheVersLaDroite.png' alt="Fleche vers la droite" />
+        <img src='../Pictures/FlecheVersLaDroiteMobile.png' alt="Fleche vers la droite" className="slideshow__rightArrow--Mobile" />
+        <img src='../Pictures/FlecheVersLaDroite.png' alt="Fleche vers la droite" className="slideshow__leftArrow--Desktop" />
       </button>
     </SlideshowStyled >
   );
