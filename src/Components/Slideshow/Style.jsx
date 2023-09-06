@@ -65,6 +65,10 @@ const SlideshowStyled = styled.div`
     color: ${colors.white};
   }
 
+  .hide {
+    visibility: hidden;
+  }
+
   /* Version mobile */
   @media only screen and (max-width: 767px) {
     width: 90%;
@@ -87,7 +91,7 @@ const SlideshowStyled = styled.div`
       }
     }
 
-    p {
+    p, .hide {
       display: none;
     }
   }
