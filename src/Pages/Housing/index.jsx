@@ -5,6 +5,7 @@ import datas from '../../Ressources/housings.json';
 {/*Components*/ }
 import Header from '../../Components/Header/Index';
 import Slideshow from '../../Components/Slideshow/Index';
+import Dropdown from '../../Components/Dropdown/Index';
 import Footer from '../../Components/Footer/Index';
 import Error from '../Error';
 
@@ -33,6 +34,19 @@ function Housing() {
                 <main>
                     <Slideshow pictureArray={housingData.pictures} pictureAlt={housingData.title} />
                     Coucou la location n° {housingId}
+
+                    <div className="collapse__housing">
+                        <Dropdown
+                            key={`aboutCollapse-${housingData.id}`}
+                            title={`titre`}
+                            text={`texte`}
+                        />
+                        <Dropdown
+                            key={`aboutCollapse-${housingData.id}`}
+                            title={`titre2`}
+                            text={`texte2`}
+                        />
+                    </div>
 
                 </main>
                 <Footer />
