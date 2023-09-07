@@ -1,19 +1,22 @@
-import React from "react";
+import React, { createContext } from "react";
 import datas from '../../Ressources/about.json';
-import './About.css';
 
 {/*Components*/ }
 import Header from '../../Components/Header/Index';
 import Banner from '../../Components/Banner/Index';
-import Dropdown from '../../Components/Dropdown/Index';
+import Collapse from '../../Components/Collapse/Index';
 import Footer from '../../Components/Footer/Index';
+
+{/*Provider*/ }
+export const MyContext = createContext();
 
 function About() {
 
     /*Récupération des infos attendues à partir des datas JSON */
     const dataArrayForCollapse = datas.map(item => ({
         title: item.title,
-        text: item.text
+        text: item.text,
+        className: "collapse__about"
     }));
 
     return (
@@ -21,17 +24,9 @@ function About() {
             <Header />
             <main>
                 <Banner className="banner__about" />
-                <div className="collapse__about">
-
-                    {/* Utilisation de map pour créer des composants Dropdown */}
-                    {dataArrayForCollapse.map((aboutCollapse, index) => (
-                        <Dropdown
-                            key={`aboutCollapse-${index}`}
-                            title={`${aboutCollapse.title}`}
-                            text={`${aboutCollapse.text}`}
-                        />
-                    ))}
-                </div >
+                <MyContext.Provider value={dataArrayForCollapse}>
+                    <Collapse />
+                </MyContext.Provider>
             </main >
             <Footer />
         </>

@@ -1,3 +1,7 @@
+import styled from 'styled-components';
+
+const CollapseStyle = styled.div`
+
 .collapse__about {
 
   display: flex;
@@ -24,3 +28,6 @@
     row-gap: 20px;
   }
 }
+`;
+
+export default CollapseStyle;
