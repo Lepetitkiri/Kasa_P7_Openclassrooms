@@ -8,11 +8,11 @@ import Collapse from '../../Components/Collapse/Index';
 import Footer from '../../Components/Footer/Index';
 
 {/*Provider*/ }
-export const MyContext = createContext();
+export const MyContextFromAboutPage = createContext();
 
 function About() {
 
-    /*Récupération des infos attendues à partir des datas JSON */
+    /*Stockage des infos à fournir au composant collapse à l'aide d'un Provider */
     const dataArrayForCollapse = datas.map(item => ({
         title: item.title,
         text: item.text,
@@ -24,9 +24,9 @@ function About() {
             <Header />
             <main>
                 <Banner className="banner__about" />
-                <MyContext.Provider value={dataArrayForCollapse}>
-                    <Collapse />
-                </MyContext.Provider>
+                <MyContextFromAboutPage.Provider value={dataArrayForCollapse}>
+                    <Collapse page="about" />
+                </MyContextFromAboutPage.Provider>
             </main >
             <Footer />
         </>

@@ -1,29 +1,40 @@
 import React, { useContext } from "react";
-import { MyContext } from '../../Pages/About/index';
 import CollapseStyle from "./Style.jsx";
+import PropTypes from "prop-types";
 
+{/*Components*/ }
 import Dropdown from "../Dropdown/Index.jsx";
 
-function Collapse() {
+{/*Contextes des provider*/ }
+import { MyContextFromAboutPage } from '../../Pages/About/index';
+import { MyContextFromHousingPage } from "../../Pages/Housing";
 
-  {/*Récupération des données venant du Provider*/ }
-  const myContext = useContext(MyContext);
+function Collapse({ page }) {
+
+  {/*Récupération des bonnes datas provenant des provider en fonction de la prop "page" */ }
+  const contextData =
+    page === "about" ? useContext(MyContextFromAboutPage) : useContext(MyContextFromHousingPage);
 
   return (
 
-    <CollapseStyle className={`${myContext[0].className}`} >
+    <CollapseStyle className={`${contextData[0].className}`} >
 
-      {/* Utilisation de map() pour créer des composants Dropdown à partir des données provenant du Provider */}
-      {myContext.map((aboutCollapse, index) => (
-        <Dropdown
-          key={`aboutCollapse-${index}`}
-          title={`${aboutCollapse.title}`}
-          text={`${aboutCollapse.text}`}
+      {/* Utilisation de map() pour créer des composants Dropdown à partir des datas du Provider */}
+      {contextData.map((item, index) => (
+        < Dropdown
+          key={`Collapse-${index}`}
+          title={item.title}
+          text={item.text}
         />
       ))
       }
+
     </ CollapseStyle >
   );
 }
+
+Collapse.propTypes = {
+  page: PropTypes.string // Validation de la prop page
+};
 
 export default Collapse;

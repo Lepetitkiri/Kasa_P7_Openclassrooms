@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const CollapseStyle = styled.div`
 
-.collapse__about {
+&.collapse__about {
 
   display: flex;
   flex-direction: row;
