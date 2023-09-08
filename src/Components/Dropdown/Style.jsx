@@ -43,12 +43,22 @@ const DropdownStyle = styled.div`
   .dropdown__datas {
     box-sizing: border-box;
     height: auto;
-    padding: 5px 5px 5px 17px;
+    padding: 40px 20px;
     border-radius: 0px 0px 10px 10px;
     color: ${colors.primary};
     background-color: ${colors.secondary};
     font-size: 24px;
     line-height: 34px;
+
+    p {
+      margin: 0px;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0px;
+    }
   }
 
   .dropdown__datas--housing {
@@ -72,7 +82,7 @@ const DropdownStyle = styled.div`
         }
 
         .dropdown__datas {
-          padding: 5px 8px 30px 15px;
+          padding: 18px 11px 0px 11px;
           font-size: 12px;
           line-height: 17px;
         }
