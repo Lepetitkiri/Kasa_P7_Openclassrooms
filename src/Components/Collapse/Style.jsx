@@ -2,14 +2,40 @@ import styled from 'styled-components';
 
 const CollapseStyle = styled.div`
 
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 86%;
+height: auto;
+
+&.collapse__housing {
+
+  margin-top: 24px;
+  margin-bottom: 201px;
+  gap: 76px;
+
+  /* Version mobile */
+  @media only screen and (max-width: 767px) {
+
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Version mobile - Très petits ecrans */
+  @media only screen and (max-width: 525px) {
+
+    margin-top: 16px;
+    margin-bottom: 59px;
+  }
+}
+
+
 &.collapse__about {
 
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
   width: 72%;
-  height: auto;
   margin-top: 31px;
   margin-bottom: 201px;
   row-gap: 31px;
@@ -18,6 +44,8 @@ const CollapseStyle = styled.div`
   @media only screen and (max-width: 767px) {
 
     width: 90%;
+    display: flex;
+    flex-direction: column;
   }
 
   /* Version mobile - Très petits ecrans */
