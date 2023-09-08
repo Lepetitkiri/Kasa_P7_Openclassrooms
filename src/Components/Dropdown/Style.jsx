@@ -35,6 +35,10 @@ const DropdownStyle = styled.div`
       color: ${colors.white};
     }
   }
+  .dropdown__title--housing h2 {
+    font-size: 18px;
+    line-height: 25.67px
+  }
 
   .dropdown__datas {
     box-sizing: border-box;
@@ -45,6 +49,12 @@ const DropdownStyle = styled.div`
     background-color: ${colors.secondary};
     font-size: 24px;
     line-height: 34px;
+  }
+
+  .dropdown__datas--housing {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
   }
 
     /* Version mobile */

@@ -21,7 +21,8 @@ function Collapse({ page }) {
 
       {/* Utilisation de map() pour créer des composants Dropdown à partir des datas du Provider */}
       {contextData.map((item, index) => (
-        < Dropdown
+        <Dropdown
+          page={page}
           key={`Collapse-${index}`}
           title={item.title}
           text={item.text}
