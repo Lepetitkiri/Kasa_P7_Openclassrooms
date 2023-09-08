@@ -43,7 +43,7 @@ const DropdownStyle = styled.div`
   .dropdown__datas {
     box-sizing: border-box;
     height: auto;
-    padding: 17px;
+    padding: 5px 5px 5px 17px;
     border-radius: 0px 0px 10px 10px;
     color: ${colors.primary};
     background-color: ${colors.secondary};
@@ -72,7 +72,7 @@ const DropdownStyle = styled.div`
         }
 
         .dropdown__datas {
-          padding: 20px 8px 55px 8px;
+          padding: 5px 8px 30px 15px;
           font-size: 12px;
           line-height: 17px;
         }
