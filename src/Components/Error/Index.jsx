@@ -7,7 +7,7 @@ function ErrorComponent() {
     <ErrorStyle>
       <h1>404</h1>
       <p>Oups! La page que vous demandez n&apos;existe pas.</p>
-      <p className="Link__error"><Link to="/Home">Retourner sur la page d&apos;accueil</Link></p>
+      <p className="Link__error"><Link to="/">Retourner sur la page d&apos;accueil</Link></p>
     </ErrorStyle>
   );
 }

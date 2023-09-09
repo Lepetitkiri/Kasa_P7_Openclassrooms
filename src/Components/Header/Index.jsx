@@ -8,7 +8,7 @@ function Header() {
     <HeaderStyle>
       <Logo className="header__logo" />
       <nav>
-        <Link to="/Home"> Accueil </Link>
+        <Link to="/"> Accueil </Link>
         <Link to="/About"> A propos </Link>
       </nav>
     </HeaderStyle>
