@@ -45,7 +45,7 @@ function Housing() {
                 <main>
                     <Slideshow pictureArray={housingData.pictures} pictureAlt={housingData.title} />
 
-                    <HostPortrait />
+                    <HostPortrait hostName={housingData.host.name} hostPicture={housingData.host.picture} />
                     <Rating rating={housingData.rating} />
 
                     <MyContextFromHousingPage.Provider value={dataArrayForCollapse}>
