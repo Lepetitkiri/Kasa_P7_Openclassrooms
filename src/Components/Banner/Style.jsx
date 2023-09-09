@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from '../../Utils/Colors';
-const bannerHomeUrl = './Pictures/Banner__Home.png';
-const bannerAboutUrl = './Pictures/Banner__About.jpg';
+const bannerHomeUrl = '/Pictures/Banner__Home.png';
+const bannerAboutUrl = '/Pictures/Banner__About.jpg';
 
 const BannerStyle = styled.div`
 
