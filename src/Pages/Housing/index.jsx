@@ -5,6 +5,7 @@ import datas from '../../Ressources/housings.json';
 {/*Components*/ }
 import Header from '../../Components/Header/Index';
 import Slideshow from '../../Components/Slideshow/Index';
+import HostPortrait from '../../Components/HostPortrait/Index';
 import Rating from '../../Components/Rating/Index';
 import Collapse from '../../Components/Collapse/Index';
 import Footer from '../../Components/Footer/Index';
@@ -44,6 +45,7 @@ function Housing() {
                 <main>
                     <Slideshow pictureArray={housingData.pictures} pictureAlt={housingData.title} />
 
+                    <HostPortrait />
                     <Rating rating={housingData.rating} />
 
                     <MyContextFromHousingPage.Provider value={dataArrayForCollapse}>
