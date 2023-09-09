@@ -21,18 +21,18 @@ function Dropdown({ page, title, text }) {
 
       {/*Ternaire permettant d'afficher la partie dropdown__datas si le state isOpen est true*/}
       {isOpen ?
-        <div className={`dropdown__datas dropdown__datas--${page}`}> <p>
+        <div className={`dropdown__datas dropdown__datas--${page}`}>
 
           {/*Ternaire permettant d'afficher text sous forme de liste si la prop recue est un array*/}
           {typeof text === 'string' ?
-            text :
+            <p> {text} </p> :
             <ul>
               {text.map((item, index) =>
                 <li key={`Dropdown-li-${index}`}> {item} </li>
               )}
             </ul>
           }
-        </p> </div> :
+        </div> :
         <div></div>
       }
     </DropdownStyle >
