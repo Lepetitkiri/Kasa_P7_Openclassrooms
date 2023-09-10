@@ -6,17 +6,17 @@ import HostPortrait from '../HostPortrait/Index.jsx';
 import Rating from '../Rating/Index.jsx';
 
 {/*Contextes du provider*/ }
-import { MycontextForHostPart } from '../../Pages/Housing';
+import { MycontextFromHousingPageForPresentation } from '../../Pages/Housing';
 
 function PresentationHost() {
 
   {/*Récupération des datas provenant du provider */ }
-  const HostValueFromContext = useContext(MycontextForHostPart);
+  const PresentationDatasFromContext = useContext(MycontextFromHousingPageForPresentation);
 
   return (
     <PresentationHostStyle className='presentation__host'>
-      <HostPortrait hostName={HostValueFromContext.hostName} hostPicture={HostValueFromContext.hostPicture} />
-      <Rating rating={HostValueFromContext.rating} />
+      <HostPortrait hostName={PresentationDatasFromContext.hostName} hostPicture={PresentationDatasFromContext.hostPicture} />
+      <Rating rating={PresentationDatasFromContext.rating} />
     </PresentationHostStyle >
   );
 }

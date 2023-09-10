@@ -11,8 +11,8 @@ import Footer from '../../Components/Footer/Index';
 import Error from '../Error';
 
 {/*Provider*/ }
-export const MyContextFromHousingPage = createContext();
-export const MycontextForHostPart = createContext();
+export const MyContextFromHousingPageForCollapse = createContext();
+export const MycontextFromHousingPageForPresentation = createContext();
 
 function Housing() {
 
@@ -52,13 +52,13 @@ function Housing() {
                 <main>
                     <Slideshow pictureArray={housingData.pictures} pictureAlt={housingData.title} />
 
-                    <MycontextForHostPart.Provider value={dataArrayForHostPart}>
+                    <MycontextFromHousingPageForPresentation.Provider value={dataArrayForHostPart}>
                         <PresentationHost />
-                    </MycontextForHostPart.Provider>
+                    </MycontextFromHousingPageForPresentation.Provider>
 
-                    <MyContextFromHousingPage.Provider value={dataArrayForCollapse}>
+                    <MyContextFromHousingPageForCollapse.Provider value={dataArrayForCollapse}>
                         <Collapse page="housing" />
-                    </MyContextFromHousingPage.Provider>
+                    </MyContextFromHousingPageForCollapse.Provider>
 
                 </main >
                 <Footer />

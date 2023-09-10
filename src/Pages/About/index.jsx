@@ -8,7 +8,7 @@ import Collapse from '../../Components/Collapse/Index';
 import Footer from '../../Components/Footer/Index';
 
 {/*Provider*/ }
-export const MyContextFromAboutPage = createContext();
+export const MyContextFromAboutPageForCollapse = createContext();
 
 function About() {
 
@@ -24,9 +24,9 @@ function About() {
             <Header />
             <main>
                 <Banner className="banner__about" />
-                <MyContextFromAboutPage.Provider value={dataArrayForCollapse}>
+                <MyContextFromAboutPageForCollapse.Provider value={dataArrayForCollapse}>
                     <Collapse page="about" />
-                </MyContextFromAboutPage.Provider>
+                </MyContextFromAboutPageForCollapse.Provider>
             </main >
             <Footer />
         </>

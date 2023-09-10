@@ -6,14 +6,14 @@ import PropTypes from "prop-types";
 import Dropdown from "../Dropdown/Index.jsx";
 
 {/*Contextes des provider*/ }
-import { MyContextFromAboutPage } from '../../Pages/About/index';
-import { MyContextFromHousingPage } from "../../Pages/Housing";
+import { MyContextFromAboutPageForCollapse } from '../../Pages/About/index';
+import { MyContextFromHousingPageForCollapse } from "../../Pages/Housing";
 
 function Collapse({ page }) {
 
   {/*Récupération des bonnes datas provenant des provider en fonction de la prop "page" */ }
   const contextData =
-    page === "about" ? useContext(MyContextFromAboutPage) : useContext(MyContextFromHousingPage);
+    page === "about" ? useContext(MyContextFromAboutPageForCollapse) : useContext(MyContextFromHousingPageForCollapse);
 
   return (
 
