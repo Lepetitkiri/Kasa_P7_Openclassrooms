@@ -4,15 +4,20 @@ import colors from '../../Utils/Colors';
 const PresentationHostStyle = styled.div`
 
   display: flex;
-height: auto;
-width: auto;
-color: ${colors.primary};
-background-color: blue;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 21px;
+  color: ${colors.primary};
 
   /* Version mobile */
   @media only screen and (max-width: 767px) {
 
-background-color: yellow;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  gap: 0px;
   }
 `;
 
