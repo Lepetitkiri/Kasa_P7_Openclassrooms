@@ -12,6 +12,7 @@ import Error from '../Error';
 
 {/*Provider*/ }
 export const MyContextFromHousingPage = createContext();
+export const MycontextForHostPart = createContext();
 
 function Housing() {
 
@@ -33,6 +34,13 @@ function Housing() {
         const housingData = datas.find((item) => item.id === housingId);
 
         /*Stockage des infos à fournir au composant collapse à l'aide d'un Provider */
+        const dataArrayForHostPart = {
+            hostName: housingData.host.name,
+            hostPicture: housingData.host.picture,
+            rating: housingData.rating
+        }
+
+        /*Stockage des infos à fournir au composant collapse à l'aide d'un Provider */
         const dataArrayForCollapse = [
             { title: "Description", text: housingData.description, className: "collapse__housing" },
             { title: "Equipements", text: housingData.equipments, className: "collapse__housing" }
@@ -44,7 +52,9 @@ function Housing() {
                 <main>
                     <Slideshow pictureArray={housingData.pictures} pictureAlt={housingData.title} />
 
-                    <PresentationHost />
+                    <MycontextForHostPart.Provider value={dataArrayForHostPart}>
+                        <PresentationHost />
+                    </MycontextForHostPart.Provider>
 
                     <MyContextFromHousingPage.Provider value={dataArrayForCollapse}>
                         <Collapse page="housing" />
