@@ -36,6 +36,8 @@ function Housing() {
 
         /*Stockage des infos à fournir au composant collapse à l'aide d'un Provider */
         const dataArrayForHostPart = {
+            title: housingData.title,
+            location: housingData.location,
             hostName: housingData.host.name,
             hostPicture: housingData.host.picture,
             rating: housingData.rating
