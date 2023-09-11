@@ -40,7 +40,8 @@ function Housing() {
             location: housingData.location,
             hostName: housingData.host.name,
             hostPicture: housingData.host.picture,
-            rating: housingData.rating
+            rating: housingData.rating,
+            tags: housingData.tags
         }
 
         /*Stockage des infos à fournir au composant collapse à l'aide d'un Provider */

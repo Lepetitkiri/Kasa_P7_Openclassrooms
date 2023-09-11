@@ -1,12 +1,18 @@
 import React from "react";
 import TagStyle from "./Style.jsx";
+import PropTypes from "prop-types";
 
-function Tag() {
+function Tag({ tags }) {
+
   return (
     <TagStyle>
-      <p> Tag </p>
+      <p> {tags} </p>
     </TagStyle>
   );
 }
+
+Tag.propTypes = {
+  tags: PropTypes.array, // Validation de la prop Tags
+};
 
 export default Tag;
