@@ -20,6 +20,13 @@ const PresentationLocationStyle = styled.div`
     line-height: 26px;
     margin: 0px;
   }
+  
+  .presentation__location__tag {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 10px;
+  }
 
   /* Version mobile */
   @media only screen and (max-width: 767px) {
