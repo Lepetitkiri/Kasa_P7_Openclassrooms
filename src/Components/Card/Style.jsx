@@ -45,9 +45,11 @@ const GalleryCardStyle = styled(Link)`
     /* Version mobile */
     @media only screen and (max-width: 767px) {
       width: 90%;
+      height: 255px;
 
       img {
         width: 100%;
+        height: 255px;
       }
     }
 `;
