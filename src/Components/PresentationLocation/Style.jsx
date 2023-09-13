@@ -5,6 +5,7 @@ const PresentationLocationStyle = styled.div`
 
   display: flex;
   flex-direction: column;
+  width: 100%;
   color: ${colors.primary};
 
   h2 {
@@ -12,6 +13,7 @@ const PresentationLocationStyle = styled.div`
     font-weight: 500;
     line-height: 51px;
     margin: 0px;
+    padding-top: 30px;
   }
 
   h3  {
@@ -24,7 +26,9 @@ const PresentationLocationStyle = styled.div`
   .presentation__location__tag {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: auto;
+    padding-top: 20px;
     gap: 10px;
   }
 
@@ -34,6 +38,7 @@ const PresentationLocationStyle = styled.div`
     h2 {
       font-size: 18px;
       line-height: 26px;
+      padding-top: 15px;
     }
 
     h3 {
@@ -41,7 +46,9 @@ const PresentationLocationStyle = styled.div`
       font-size: 14px;
     }
 
-    width: 90%;
+    .presentation__location__tag {
+      padding-top: 10px;
+    }
   }
 `;
 

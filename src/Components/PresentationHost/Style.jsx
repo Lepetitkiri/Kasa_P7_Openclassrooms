@@ -7,6 +7,7 @@ const PresentationHostStyle = styled.div`
   flex-direction: column;
   align-items: flex-end;
   gap: 21px;
+  padding-top: 24px;
   color: ${colors.primary};
 
   /* Version mobile */
@@ -16,8 +17,8 @@ const PresentationHostStyle = styled.div`
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
   gap: 0px;
+  padding-top: 16.5px;
   }
 `;
 

@@ -20,10 +20,14 @@ const TagStyle = styled.div`
 /* Version mobile */
 @media only screen and (max-width: 767px) {
 
-  width: 84px;
-  height: 18px;
+  min-width: 84px;
+  width: auto;
   font-size: 10px;
-  line-height: 14px;
+  height: 18px;
+
+    p {
+      height: 18px;
+    }
   }
 
 `;

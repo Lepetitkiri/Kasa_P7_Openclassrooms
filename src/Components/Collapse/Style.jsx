@@ -26,7 +26,7 @@ height: auto;
   /* Version mobile - Très petits ecrans */
   @media only screen and (max-width: 525px) {
 
-    margin-top: 16px;
+    margin-top: 16.5px;
     margin-bottom: 59px;
   }
 }

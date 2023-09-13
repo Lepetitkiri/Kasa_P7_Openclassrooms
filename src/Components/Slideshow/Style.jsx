@@ -7,8 +7,8 @@ const SlideshowStyled = styled.div`
   position: relative;
   width: 86%;  
   height: 415px;
-  margin-top: 20px;
-  object-fit: cover;
+  padding-top: 27px;
+  object-fit: fill;
 
   .slideshow__picture {
     width: 100%;
@@ -72,7 +72,7 @@ const SlideshowStyled = styled.div`
   /* Version mobile */
   @media only screen and (max-width: 767px) {
     width: 90%;
-    height: 516px;
+    height: 255px;
 
     button {
       .slideshow__leftArrow--Desktop, &.slideshow__rightArrow--Desktop {
