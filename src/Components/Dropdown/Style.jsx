@@ -11,6 +11,7 @@ const DropdownStyle = styled.div`
   .dropdown__title {
     display: flex;
     height: 47px;
+    z-index: 1;
 
     h2 {
       display: flex;
@@ -49,6 +50,9 @@ const DropdownStyle = styled.div`
     background-color: ${colors.secondary};
     font-size: 24px;
     line-height: 34px;
+    position: relative;
+    top: -8px;
+    z-index: 0;
 
     p {
       margin: 0px;
@@ -67,25 +71,26 @@ const DropdownStyle = styled.div`
     line-height: 26px;
   }
 
-    /* Version mobile */
-    @media only screen and (max-width: 767px) {
+  /* Version mobile */
+  @media only screen and (max-width: 767px) {
 
-        width: 100%;
-      
-        .dropdown__title {
-          height : 30px;
-      
-          h2 {
-            font-size: 13px;
-            line-height: 18.54px;
-          }
+      width: 100%;
+    
+      .dropdown__title {
+        height : 30px;
+    
+        h2 {
+          font-size: 13px;
+          line-height: 18.54px;
         }
+      }
 
-        .dropdown__datas {
-          padding: 18px 11px 0px 11px;
-          font-size: 12px;
-          line-height: 17px;
-        }
+      .dropdown__datas {
+        padding: 18px 11px 40px 11px;
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
 `;
 
 export default DropdownStyle;
