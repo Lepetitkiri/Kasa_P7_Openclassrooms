@@ -23,7 +23,7 @@ function About() {
         <>
             <Header />
             <main>
-                <Banner className="banner__about" />
+                <Banner className="banner__about" bannerText="A propos du site de location Kasa" />
                 <MyContextFromAboutPageForCollapse.Provider value={dataArrayForCollapse}>
                     <Collapse page="about" />
                 </MyContextFromAboutPageForCollapse.Provider>

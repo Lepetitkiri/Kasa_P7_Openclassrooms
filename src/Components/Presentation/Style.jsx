@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Presentation = styled.div`
+const Presentation = styled.section`
 
   display: flex;
   justify-content: space-between;

@@ -11,7 +11,7 @@ function Dropdown({ page, title, text }) {
     <DropdownStyle className={`dropdown--${page}`}>
       <div className={`dropdown__title dropdown__title--${page}`} >
         <h2> {title} </h2>
-        <button onClick={() => setIsOpen(!isOpen)}>
+        <button aria-expanded={isOpen} onClick={() => setIsOpen(!isOpen)}>
           {/*Ternaire permettant d'afficher une flèche vers le bas si le state isOpen est true*/}
           {isOpen ?
             <img src='/Pictures/FlecheVersLeBas.png' alt="Flèche vers le bas"></img> :

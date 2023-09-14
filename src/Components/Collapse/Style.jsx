@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const CollapseStyle = styled.div`
+const CollapseStyle = styled.section`
 
 display: flex;
 flex-direction: row;

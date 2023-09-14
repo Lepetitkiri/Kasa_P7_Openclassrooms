@@ -18,7 +18,7 @@ function Slideshow({ pictureArray, pictureAlt }) {
   }
 
   return (
-    <SlideshowStyled>
+    <SlideshowStyled role="region" aria-label="Carousel principal">
       <img src={pictureArray[currentPicture]} alt={pictureAlt} className="slideshow__picture" />
       <div className={pictureArray.length === 1 ? 'hide' : ''}> {/*Conditions permettant de cacher les flèches et bullet si il n'y a qu'une seule img*/}
         <button className="slideshow__leftArrow" onClick={previousPicture}>

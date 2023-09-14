@@ -11,7 +11,7 @@ function Home() {
         <>
             <Header />
             <main>
-                <Banner className="banner__home" />
+                <Banner className="banner__home" bannerText="Chez vous, partout et ailleurs" />
                 <Gallery />
             </main>
             <Footer />
