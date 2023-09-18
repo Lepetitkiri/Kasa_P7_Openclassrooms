@@ -20,13 +20,13 @@ const ErrorStyle = styled.div`
     height: 263px;  
     font-size: 288px;
     font-weight: 700;
-    margin: 0px;
+    margin: 0;
   }
 
   p {
     width: 100%;    
     text-align: center;
-    margin: 0px;
+    margin: 0;
     font-size: 36px;
     font-weight: 500;
     height: 51px;
@@ -36,6 +36,7 @@ const ErrorStyle = styled.div`
       font-size: 18px;
       height: 26px;
       padding-top: 182px;
+      text-decoration: underline;
     }
   }
 

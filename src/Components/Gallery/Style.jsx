@@ -11,7 +11,7 @@ const GalleryStyle = styled.section`
   width: 86%;
   border-radius: 25px;
   background: #F6F6F6;
-  margin: 43px 0px 43px 0px;
+  margin: 43px 0 43px 0;
   padding: 56px 50px 56px 50px;
   row-gap: 50px;
   column-gap : 50px;
@@ -25,10 +25,10 @@ const GalleryStyle = styled.section`
     /* Version mobile */
     @media only screen and (max-width: 767px) {
       width: 100%;
-      border-radius: 0px;
-      margin: 22px 0px 43px 0px;
+      border-radius: 0;
+      margin: 22px 0 43px 0;
       background-color: ${colors.white};
-      padding: 0px;
+      padding: 0;
       }
 `;
 

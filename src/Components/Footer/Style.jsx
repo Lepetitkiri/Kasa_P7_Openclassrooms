@@ -8,7 +8,7 @@ const FooterStyle = styled.footer`
   align-items: center;
   background-color: ${colors.black};
   color: ${colors.white};
-  padding: 66px 0px 29px 0px;
+  padding: 66px 0 29px 0;
   gap: 28.556px;
 
   p {
@@ -23,8 +23,8 @@ const FooterStyle = styled.footer`
 
   /* Version mobile */
   @media only screen and (max-width: 767px) {
-    padding: 62px 0px 62px 0px;
-    gap: 0px;
+    padding: 62px 0 62px 0;
+    gap: 0;
   }
 
   /* Version mobile - Très petits ecrans */

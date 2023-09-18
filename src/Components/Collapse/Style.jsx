@@ -18,7 +18,6 @@ height: auto;
   @media only screen and (max-width: 767px) {
 
     width: 90%;
-    display: flex;
     flex-direction: column;
     gap: 20px;
   }
@@ -44,7 +43,6 @@ height: auto;
   @media only screen and (max-width: 767px) {
 
     width: 90%;
-    display: flex;
     flex-direction: column;
   }
 

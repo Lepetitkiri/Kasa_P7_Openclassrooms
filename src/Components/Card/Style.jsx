@@ -23,15 +23,15 @@ const GalleryCardStyle = styled(Link)`
     }
 
   img {
-    width: 340px;
-    height: 340px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     object-fit: cover;
   }
 
   p {
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     left: 6%;
     width: 60%;
     font-size: 18px;
@@ -49,7 +49,7 @@ const GalleryCardStyle = styled(Link)`
 
       img {
         width: 100%;
-        height: 255px;
+        height: 100%;
       }
     }
 `;

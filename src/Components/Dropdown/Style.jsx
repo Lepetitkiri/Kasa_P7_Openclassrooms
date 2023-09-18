@@ -20,7 +20,7 @@ const DropdownStyle = styled.div`
       width: 90%;
       margin: 0px;
       padding-left: 10px;
-      border-radius: 10px 0px 0px 10px;
+      border-radius: 10px 0 0 10px;
       background-color: ${colors.primary};
       color: ${colors.white};
       font-size: 24px;
@@ -30,12 +30,13 @@ const DropdownStyle = styled.div`
 
     button {
       width: 15%;
-      border: 0px;
-      border-radius: 0px 10px 10px 0px;
+      border: 0;
+      border-radius: 0 10px 10px 0;
       background-color: ${colors.primary};
       color: ${colors.white};
     }
   }
+
   .dropdown__title--housing h2 {
     font-size: 18px;
     line-height: 25.67px
@@ -45,7 +46,7 @@ const DropdownStyle = styled.div`
     box-sizing: border-box;
     height: auto;
     padding: 40px 20px;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0 0 10px 10px;
     color: ${colors.primary};
     background-color: ${colors.secondary};
     font-size: 24px;
@@ -55,13 +56,13 @@ const DropdownStyle = styled.div`
     z-index: 0;
 
     p {
-      margin: 0px;
+      margin: 0;
     }
     
     ul {
       list-style: none;
       padding: 0;
-      margin: 0px;
+      margin: 0;
     }
   }
 

@@ -14,8 +14,7 @@ const LogoStyled = styled.div`
   @media only screen and (max-width: 767px) {
     width: 145px;
     height: 47px;
-    flex-shrink: 0;
-  }
+    }
   }
   
 

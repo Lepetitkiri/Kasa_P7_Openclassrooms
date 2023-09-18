@@ -40,9 +40,6 @@ const BannerStyle = styled.div`
     &.banner__home {
       h1 {
         font-size: 24px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 100%;
       }
     }
   }
@@ -64,10 +61,9 @@ const BannerStyle = styled.div`
   /* Version mobile - Très petits ecrans */
   @media only screen and (max-width: 525px) {
     &.banner__home {
-        display: flex;
         justify-content: flex-start;
       h1 {
-        padding: 0px 16px 0px 16px;
+        padding: 0px 16px;
       }
     }
   }

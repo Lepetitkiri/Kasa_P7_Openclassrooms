@@ -12,7 +12,7 @@ const PresentationLocationStyle = styled.div`
     font-size: 36px;
     font-weight: 500;
     line-height: 51px;
-    margin: 0px;
+    margin: 0;
     padding-top: 30px;
   }
 
@@ -20,14 +20,12 @@ const PresentationLocationStyle = styled.div`
     font-size: 18px;
     font-weight: 500;
     line-height: 26px;
-    margin: 0px;
+    margin: 0;
   }
   
   .presentation__location__tag {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    width: auto;
     padding-top: 20px;
     gap: 10px;
   }

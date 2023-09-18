@@ -17,7 +17,7 @@ const PresentationHostStyle = styled.div`
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  gap: 0px;
+  gap: 0;
   padding-top: 16.5px;
   }
 `;

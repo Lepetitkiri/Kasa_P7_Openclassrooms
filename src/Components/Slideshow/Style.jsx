@@ -18,25 +18,22 @@ const SlideshowStyled = styled.div`
 
 
   button {
+    display: flex;
     position : absolute;
+    justify-content: center;
+    align-items: center;
     border: 0;
     width: 96px;
     height: 119px;
     background: transparent;
     cursor: pointer;
+    top: 50%;
+    transform: translate(0,-50%);
 
-    &.slideshow__leftArrow, &.slideshow__rightArrow {
-      justify-content: center;
-      align-items: center;
-      width: auto;
-      height: auto;
-      top: 50%;
-      transform: translate(0,-50%);
-    }
-    &.slideshow__leftArrow {
+    &.slideshow__leftArrow, .slideshow__leftArrow--Mobile  {
       left: 0%;
     }
-    &.slideshow__rightArrow {
+    &.slideshow__rightArrow, .slideshow__rightArrow--Mobile {
       right: 0%;
     }
 
@@ -45,12 +42,6 @@ const SlideshowStyled = styled.div`
       position: absolute;
       top: 50%;
       transform: translate(0,-50%);
-    }
-    .slideshow__leftArrow--Mobile {
-      left: 0%;
-    }
-    .slideshow__rightArrow--Mobile {
-      right: 0%;
     }
   }
 
