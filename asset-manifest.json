@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Kasa_P7_Openclassrooms/static/js/main.f39d6980.js",
+    "main.js": "/Kasa_P7_Openclassrooms/static/js/main.cc23472a.js",
     "index.html": "/Kasa_P7_Openclassrooms/index.html",
-    "main.f39d6980.js.map": "/Kasa_P7_Openclassrooms/static/js/main.f39d6980.js.map"
+    "main.cc23472a.js.map": "/Kasa_P7_Openclassrooms/static/js/main.cc23472a.js.map"
   },
   "entrypoints": [
-    "static/js/main.f39d6980.js"
+    "static/js/main.cc23472a.js"
   ]
 }
