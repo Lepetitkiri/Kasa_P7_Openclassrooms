@@ -13,8 +13,8 @@ function Rating({ rating }) {
     <RatingStyle className='presentation__host__rating'>
       {ratingArray.map((item, index) => (
         item === 1 ?
-          <img key={`rating-star-${index}`} className='presentation__host__rating--full' src='/Pictures/EtoilePleine.png' alt='Etoile pleine'></img> :
-          <img key={`rating-star-${index}`} className='presentation__host__rating--empty' src='/Pictures/EtoileVide.png' alt='Etoile vide'></img>
+          <img key={`rating-star-${index}`} className='presentation__host__rating--full' src='../Pictures/EtoilePleine.png' alt='Etoile pleine'></img> :
+          <img key={`rating-star-${index}`} className='presentation__host__rating--empty' src='../Pictures/EtoileVide.png' alt='Etoile vide'></img>
       ))}
     </RatingStyle >
   );

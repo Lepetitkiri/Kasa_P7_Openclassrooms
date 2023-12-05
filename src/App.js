@@ -9,7 +9,7 @@ import About from './Pages/About'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Kasa_P7_Openclassrooms">
       <Routes>
         <Route path="*" element={<Error />} />
         <Route path="/" element={<Home />} />

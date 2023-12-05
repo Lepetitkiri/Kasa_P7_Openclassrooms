@@ -14,8 +14,8 @@ function Dropdown({ page, title, text }) {
         <button aria-expanded={isOpen} onClick={() => setIsOpen(!isOpen)}>
           {/*Ternaire permettant d'afficher une flèche vers le bas si le state isOpen est true*/}
           {isOpen ?
-            <img src='/Pictures/FlecheVersLeBas.png' alt="Flèche vers le bas"></img> :
-            <img src='/Pictures/FlecheVersLeHaut.png' alt="Flèche vers le haut"></img>}
+            <img src='../Pictures/FlecheVersLeBas.png' alt="Flèche vers le bas"></img> :
+            <img src='../Pictures/FlecheVersLeHaut.png' alt="Flèche vers le haut"></img>}
         </button>
       </div>
 
