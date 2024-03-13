@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import RatingStyle from "./Style.jsx";
 import PropTypes from "prop-types";
 
+import { MyContextForBasenameValue } from '../../index';
 function Rating({ rating }) {
+
+  const basename = useContext(MyContextForBasenameValue);
 
   const ratingNumber = parseInt(rating); // String -> Number
 
@@ -13,8 +16,8 @@ function Rating({ rating }) {
     <RatingStyle className='presentation__host__rating'>
       {ratingArray.map((item, index) => (
         item === 1 ?
-          <img key={`rating-star-${index}`} className='presentation__host__rating--full' src='../Pictures/EtoilePleine.png' alt='Etoile pleine'></img> :
-          <img key={`rating-star-${index}`} className='presentation__host__rating--empty' src='../Pictures/EtoileVide.png' alt='Etoile vide'></img>
+          <img key={`rating-star-${index}`} className='presentation__host__rating--full' src={`${basename}/Pictures/EtoilePleine.png`} alt='Etoile pleine'></img> :
+          <img key={`rating-star-${index}`} className='presentation__host__rating--empty' src={`${basename}/Pictures/EtoileVide.png`} alt='Etoile vide'></img>
       ))}
     </RatingStyle >
   );

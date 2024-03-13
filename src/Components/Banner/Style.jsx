@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import colors from '../../Utils/Colors';
-const bannerHomeUrl = './Pictures/Banner__Home.png';
-const bannerAboutUrl = './Pictures/Banner__About.jpg';
+import PropTypes from 'prop-types';
+const bannerHomeUrl = '/Pictures/Banner__Home.png';
+const bannerAboutUrl = '/Pictures/Banner__About.jpg';
 
 const BannerStyle = styled.div`
 
@@ -17,7 +18,7 @@ const BannerStyle = styled.div`
 
 &.banner__home {
   margin-top: 63px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${bannerHomeUrl});
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('${props => props.basename}${bannerHomeUrl}');
   h1 {
     color: ${colors.white};
     font-size: 48px;
@@ -29,7 +30,7 @@ const BannerStyle = styled.div`
 
 &.banner__about {
   margin-top: 44px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${bannerAboutUrl});
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('${props => props.basename}${bannerAboutUrl}');
   h1 {
     display: none;
   }
@@ -68,5 +69,9 @@ const BannerStyle = styled.div`
     }
   }
 `;
+
+BannerStyle.propTypes = {
+  basename: PropTypes.string,
+};
 
 export default BannerStyle;

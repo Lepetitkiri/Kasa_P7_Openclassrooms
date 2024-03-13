@@ -7,6 +7,7 @@ import Gallery from '../../Components/Gallery/Index';
 import Footer from '../../Components/Footer/Index';
 
 function Home() {
+
     return (
         <>
             <Header />

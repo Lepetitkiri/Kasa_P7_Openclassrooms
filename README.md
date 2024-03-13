@@ -26,4 +26,4 @@ Veuillez vous assurer que `Node.js v18.16.1` est installé.
 Dans le dossier racine, tapper `npm install` puis `npm start` dans le terminal de commande.
 Un message indiquant "Compiled successfully! Local: http://localhost:3000/Kasa_P7_Openclassrooms " doit apparaitre indiquant que le serveur a correctement démarré.
 *Si le site ne démare pas correctement, veuillez vous assurer que le port 3000 est libre d'accès.*
-Veuillez ouvrir un navigateur et vous rendre à l'adresse `http://localhost:3000/Kasa_P7_Openclassrooms/`.
+Veuillez ouvrir un navigateur et vous rendre à l'adresse `http://localhost:3000/Kasa_P7_Openclassrooms`.

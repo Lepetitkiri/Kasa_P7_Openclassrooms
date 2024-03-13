@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import BannerStyle from "./Style.jsx";
 import PropTypes from "prop-types";
 
+import { MyContextForBasenameValue } from '../../index.js';
+
 function Banner({ className, bannerText }) {
+
+  const basename = useContext(MyContextForBasenameValue);
+
   return (
-    <BannerStyle className={className}>
+    <BannerStyle basename={basename} className={className}>
       <h1>{bannerText}</h1>
     </BannerStyle>
   );
