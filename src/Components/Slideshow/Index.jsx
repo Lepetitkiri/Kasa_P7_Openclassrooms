@@ -20,17 +20,15 @@ function Slideshow({ pictureArray, pictureAlt }) {
   return (
     <SlideshowStyled role="region" aria-label="Carousel principal">
       <img src={pictureArray[currentPicture]} alt={pictureAlt} className="slideshow__picture" />
-      <div className={pictureArray.length === 1 ? 'hide' : ''}> {/*Conditions permettant de cacher les flèches et bullet si il n'y a qu'une seule img*/}
-        <button className="slideshow__leftArrow" onClick={previousPicture}>
-          <img src='../Pictures/FlecheVersLaGauche.png' alt="Fleche vers la gauche" className="slideshow__leftArrow--Desktop" />
-          <img src='../Pictures/FlecheVersLaGaucheMobile.png' alt="Fleche vers la gauche" className="slideshow__leftArrow--Mobile" />
-        </button>
-        <p >{currentPicture + 1} / {pictureArray.length} </p>
-        <button className="slideshow__rightArrow" onClick={nextPicture}>
-          <img src='../Pictures/FlecheVersLaDroiteMobile.png' alt="Fleche vers la droite" className="slideshow__rightArrow--Mobile" />
-          <img src='../Pictures/FlecheVersLaDroite.png' alt="Fleche vers la droite" className="slideshow__leftArrow--Desktop" />
-        </button>
-      </div>
+      <button className="slideshow__leftArrow" onClick={previousPicture}>
+        <img src='../Pictures/FlecheVersLaGauche.png' alt="Fleche vers la gauche" className="slideshow__leftArrow--Desktop" />
+        <img src='../Pictures/FlecheVersLaGaucheMobile.png' alt="Fleche vers la gauche" className="slideshow__leftArrow--Mobile" />
+      </button>
+      <p >{currentPicture + 1} / {pictureArray.length} </p>
+      <button className="slideshow__rightArrow" onClick={nextPicture}>
+        <img src='../Pictures/FlecheVersLaDroiteMobile.png' alt="Fleche vers la droite" className="slideshow__rightArrow--Mobile" />
+        <img src='../Pictures/FlecheVersLaDroite.png' alt="Fleche vers la droite" className="slideshow__leftArrow--Desktop" />
+      </button>
     </SlideshowStyled >
   );
 }
