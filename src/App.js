@@ -1,7 +1,5 @@
-import React, { useContext } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import { MyContextForBasenameValue } from './index';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom';
 
 {/* Importation des routes */ }
 import Error from './Pages/Error'
@@ -11,17 +9,15 @@ import About from './Pages/About'
 
 function App() {
 
-  const basename = useContext(MyContextForBasenameValue);
-
   return (
-    <BrowserRouter basename={basename}>
-      <Routes>
-        <Route path="*" element={<Error />} />
-        <Route path="/" element={<Home />} />
-        <Route path="housing/:housingId" element={<Housing />} />
-        <Route path="about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="" element={<Home />} />
+      <Route exact path="housing/:housingId" element={<Housing />} />
+      <Route exact path="/About" element={<About />} />
+      <Route exact path="/Error" element={<Error />} />
+      <Route path="*" element={<Error />} />
+    </Routes>
   );
 }
 
