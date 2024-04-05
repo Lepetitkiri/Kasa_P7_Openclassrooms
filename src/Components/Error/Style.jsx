@@ -5,65 +5,78 @@ const ErrorStyle = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 86%;
-  padding-top: 169px;
-  padding-bottom: 159px;
-  color: ${colors.primary};
+  padding: 50px 0;
 
-  h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;  
-    height: 263px;  
-    font-size: 288px;
-    font-weight: 700;
+  & .Error-Game__Instructions {
+    color: ${colors.white};
+    width: 100%;
+    text-align: center;   
     margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
   }
 
-  p {
-    width: 100%;    
+  & .Error-Game__First-Hidden-Text {    
+    width: 100%;
     text-align: center;
     margin: 0;
-    font-size: 36px;
     font-weight: 500;
     height: 51px;
-    padding-top: 66px;
+    font-size: 18px;
+    height: 26px;
+    text-decoration: underline;
+    padding-bottom: 30px;
+  }
 
-    &.Link__error {
-      font-size: 18px;
-      height: 26px;
-      padding-top: 182px;
+  & .Error-Game__Container {
+    width: 300px;
+    height: 300px;
+    & .Error-Game__First-Hidden-Text {
+      position: absolute;
+      width: 300px;
+      height: 0px;
+      padding: 0;
+      top: 350px;
+      text-decoration: none;
+      color: ${colors.primary};
+      font-weight: bolder;
+    }
+    & .Error-Game__Second-Hidden-Text {
+      width: 300px;
+      position: absolute;
+      top: 400px;
       text-decoration: underline;
     }
   }
 
+  & .Error-Game__Canvas {
+    border-radius: 10px;
+    background-color: ${colors.white};
+  }
+
+  /* Version tablette */
+  @media only screen and (max-width: 992px) {
+  }
+
+
 /* Version mobile */
   @media only screen and (max-width: 767px) {
-      width: 90%;
-      padding-top: 195px;
-      padding-bottom: 235px;
+    width: 90%;
 
-      h1 { 
-        height: 99px;  
-        font-size: 96px;
+    & .Error-Game__First-Hidden-Text {
+      height: 52px;
+      font-size: 18px;
+      line-height: 26px;
+  
+      &.Link__error {
+        font-size: 14px;
+        height: 20px;
+        line-height: 20px;
       }
-
-      p {
-        padding-top: 11px;
-        height: 52px;
-        font-size: 18px;
-        line-height: 26px;
-    
-        &.Link__error {
-          font-size: 14px;
-          height: 20px;
-          padding-top: 133px;
-          line-height: 20px;
-        }
-      }
+    }
   }
 `;
 
