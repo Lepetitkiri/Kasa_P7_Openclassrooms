@@ -7,8 +7,6 @@ import PresentationHost from '../PresentationHost/Index.jsx';
 
 function Presentation() {
 
-  {/*Récupération des datas provenant du provider */ }
-
   return (
     <PresentationStyle className='presentationPart'>
       <PresentationLocation />

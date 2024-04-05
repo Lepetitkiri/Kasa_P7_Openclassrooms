@@ -10,7 +10,7 @@ const ErrorStyle = styled.div`
   padding: 50px 0;
 
   & .Error-Game__Instructions {
-    color: ${colors.white};
+    color: ${colors.black};
     width: 100%;
     text-align: center;   
     margin: 0;

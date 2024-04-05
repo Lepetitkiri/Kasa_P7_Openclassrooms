@@ -12,7 +12,7 @@ function Tag({ tags }) {
 }
 
 Tag.propTypes = {
-  tags: PropTypes.string, // Validation de la prop Tags
+  tags: PropTypes.string,
 };
 
 export default Tag;

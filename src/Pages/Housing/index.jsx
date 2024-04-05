@@ -16,13 +16,19 @@ export const MycontextFromHousingPageForPresentation = createContext();
 
 function Housing() {
 
-    {/* Récupération de l'id associé au logement */ }
+    /**
+     * Récupère l'ID associé au logement à partir des paramètres de l'URL.
+     * @param {string} housingId - L'identifiant du logement récupéré des paramètres de l'URL.
+     */
     const { housingId } = useParams();
 
-    {/*Fonction de vérification du format de l'ID via un masque Regex */ }
     let idRegex = /^[a-zA-Z0-9]+$/;
 
-    {/*Recherche de correspondance dans la base de données */ }
+    /**
+    * Vérifie si l'ID du logement correspond à un ID présent dans la base de données.
+    * @param {Object[]} datas - Le tableau de données contenant les informations sur les logements.
+    * @param {string} housingId - L'identifiant du logement à vérifier.
+    */
     const isHousingIdCorrect = datas.some(item => item.id === housingId);
 
 
@@ -30,10 +36,22 @@ function Housing() {
         return <Error />;
     } else {
 
-        {/* Récupération de toutes les données concernant le logement */ }
+        /**
+        * Récupère toutes les informations associées à un logement spécifique à partir de son ID.
+        * @param {Object[]} datas - Le tableau de données contenant les informations sur les logements.
+        * @param {string} housingId - L'identifiant du logement à récupérer.
+        */
         const housingData = datas.find((item) => item.id === housingId);
 
-        /*Stockage des infos à fournir au composant collapse à l'aide d'un Provider */
+        /**
+        * Stocke les informations à fournir au composant collapse pour la partie hébergeur.
+        * @param {string} title - Le titre du logement.
+        * @param {string} location - L'emplacement du logement.
+        * @param {string} hostName - Le nom de l'hébergeur.
+        * @param {string} hostPicture - L'URL de la photo de l'hébergeur.
+        * @param {string} rating - Le classement du logement.
+        * @param {string[]} tags - Les tags associés au logement.
+        */
         const dataArrayForHostPart = {
             title: housingData.title,
             location: housingData.location,
@@ -43,7 +61,12 @@ function Housing() {
             tags: housingData.tags
         }
 
-        /*Stockage des infos à fournir au composant collapse à l'aide d'un Provider */
+        /**
+        * Stocke les informations à fournir au composant collapse pour la partie logement à l'aide d'un provider.
+        * @param {string} title - Le titre de la section.
+        * @param {string} text - Le texte à afficher dans la section.
+        * @param {string} className - La classe CSS à appliquer à la section.
+        */
         const dataArrayForCollapse = [
             { title: "Description", text: housingData.description, className: "collapse__housing" },
             { title: "Equipements", text: housingData.equipments, className: "collapse__housing" }

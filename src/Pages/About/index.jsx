@@ -12,7 +12,12 @@ export const MyContextFromAboutPageForCollapse = createContext();
 
 function About() {
 
-    /*Stockage des infos à fournir au composant collapse à l'aide d'un Provider */
+    /* Stockage des informations à fournir au composant collapse à l'aide d'un Provider */
+    /**
+     * Stocke les informations à fournir au composant collapse à l'aide d'un Provider.
+     * @param {Object[]} datas - Les données à mapper pour créer les éléments du collapse.
+     * @returns {Object[]} Un tableau d'objets contenant les informations nécessaires au composant collapse.
+     */
     const dataArrayForCollapse = datas.map(item => ({
         title: item.title,
         text: item.text,

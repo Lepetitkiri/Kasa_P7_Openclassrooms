@@ -16,6 +16,9 @@ function ErrorComponent() {
     const ctx = canvas.getContext('2d');
 
     // Fonction pour dessiner l'image sur le canvas
+    /**
+     * @param {MouseEvent} e - L'événement de déplacement de la souris.
+     */
     const drawImage = () => {
       if (imageRef.current) {
         ctx.drawImage(imageRef.current, 0, 0, canvas.width, canvas.height);
@@ -30,6 +33,10 @@ function ErrorComponent() {
       drawImage(); // Dessiner l'image initiale
     };
 
+    /**
+   * Fonction pour gérer le déplacement de la souris sur le canvas.
+   * @param {MouseEvent} e - L'événement de déplacement de la souris.
+   */
     const handleMouseMove = (e) => {
       const rect = canvas.getBoundingClientRect();
       const x = e.clientX - rect.left; // Coordonnée X relative au canvas
@@ -39,6 +46,10 @@ function ErrorComponent() {
       ctx.clearRect(x - 10, y - 10, 80, 80);
     };
 
+    /**
+   * Fonction pour gérer le déplacement du toucher sur le canvas.
+   * @param {TouchEvent} e - L'événement de déplacement du toucher.
+   */
     const handleTouchMove = (e) => {
       const rect = canvas.getBoundingClientRect();
       const touch = e.touches[0];

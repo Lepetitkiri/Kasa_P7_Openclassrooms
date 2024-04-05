@@ -45,12 +45,12 @@ function Dropdown({ page, title, text }) {
 }
 
 Dropdown.propTypes = {
-  page: PropTypes.string, // Validation de la prop page
-  title: PropTypes.string.isRequired, // Validation de la prop title
+  page: PropTypes.string,
+  title: PropTypes.string.isRequired,
   text: PropTypes.oneOfType([
-    PropTypes.string, // La prop text peut être une chaîne de caractères
-    PropTypes.arrayOf(PropTypes.string), // Ou un tableau de chaînes de caractères
-  ]).isRequired, // Validation de la prop text
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]).isRequired,
 };
 
 export default Dropdown;

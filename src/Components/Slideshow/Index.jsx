@@ -8,14 +8,21 @@ function Slideshow({ pictureArray, pictureAlt }) {
 
   const basename = useContext(MyContextForBasenameValue);
 
-  {/*Initialisation du numéro de l'image courante dans le useState */ }
+  // Initialisation du numéro de l'image courante dans le useState
   const [currentPicture, setCurrentPicture] = useState(0);
 
-  {/*Fonction permettant de définir l'indice précédent */ }
+  // Fonction permettant de définir l'indice précédent
+  /**
+   * Définit l'indice précédent de l'image courante.
+   */
   function previousPicture() {
     setCurrentPicture((prevIndex) => (prevIndex === 0 ? pictureArray.length - 1 : prevIndex - 1));
   }
-  {/*Fonction permettant de définir l'indice suivant */ }
+
+  // Fonction permettant de définir l'indice suivant
+  /**
+   * Définit l'indice suivant de l'image courante.
+   */
   function nextPicture() {
     setCurrentPicture((prevIndex) => (prevIndex === pictureArray.length - 1 ? 0 : prevIndex + 1));
   }
@@ -37,8 +44,8 @@ function Slideshow({ pictureArray, pictureAlt }) {
 }
 
 Slideshow.propTypes = {
-  pictureArray: PropTypes.array, // Validation de la prop pictureArray
-  pictureAlt: PropTypes.string // Validation de la prop pictureAlt
+  pictureArray: PropTypes.array,
+  pictureAlt: PropTypes.string
 };
 
 export default Slideshow;

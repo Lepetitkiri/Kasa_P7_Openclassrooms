@@ -11,7 +11,7 @@ import { MyContextFromHousingPageForCollapse } from "../../Pages/Housing";
 
 function Collapse({ page }) {
 
-  {/*Récupération des bonnes datas provenant des provider en fonction de la prop "page" */ }
+  // Récupération des données appropriées du contexte en fonction de la page actuelle.
   const contextData =
     page === "about" ? useContext(MyContextFromAboutPageForCollapse) : useContext(MyContextFromHousingPageForCollapse);
 
